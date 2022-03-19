@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Interview
+{% endblock %}
+
+
+{%block script%}
+{%endblock%}
+{% block main %}
+
+
+<h1>Your information</h1>
+
+<table>
+{%for row in rows %}
+    <tr>
+        <th>Id</th>
+        <td>{{row['student_id']}}</td>
+    </tr>
+        <tr>
+        <th>Student</th>
+        <td>{{row['student']}}</td>
+    </tr>
+        <tr>
+        <th>Father</th>
+        <td>{{row['father']}}</td>
+    </tr>
+        <tr>
+        <th>Mother</th>
+        <td>{{row['mother']}}</td>
+    </tr>
+        <tr>
+        <th>Email</th>
+        <td>{{row['email']}}</td>
+    </tr>
+        <tr>
+        <th>Birth</th>
+        <td>{{row['birth']}}</td>
+    </tr>
+        <tr>
+        <th>Adress</th>
+        <td>{{row['adress']}}</td>
+    </tr>
+        <tr>
+        <th>Father's Number</th>
+        <td>{{row['fnum']}}</td>
+    </tr>
+        <tr>
+        <th>Mother's number</th>
+        <td>{{row['mnum']}}</td>
+    </tr>
+</table>
+{%endfor%}
+
+<p></p>
+<p></p>
+<p>Check your email in two days, you will receive your interview date!</p>
+{% endblock %}

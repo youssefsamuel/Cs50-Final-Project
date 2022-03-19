@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Interview
+{% endblock %}
+
+
+{%block script%}
+{%endblock%}
+{% block main %}
+
+
+<h1>Edit information</h1>
+
+<table>
+{%for row in rows %}
+<div class="container">
+        <form  action="/edit" method="post">
+            <div class="form-group">
+                <label for="father">Father's first name:</label>
+                <input autocomplete="off" autofocus class="form-control" value="{{row['father']}}" name="father" id="father" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email to contact:</label>
+                <input autocomplete="off" autofocus class="form-control" name="email" id="email" value="{{row['email']}}" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="father_number">Father's number:</label>
+                <input autocomplete="off" autofocus class="form-control" name="father_number" id="father_number" value="{{row['fnum']}}" type="number">
+            </div>
+
+            <div class="form-group">
+                <label for="father">Mother's first name:</label>
+                <input autocomplete="off" autofocus class="form-control" name="mother" id="mother" value="{{row['mother']}}" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="father_number">Mother's number:</label>
+                <input autocomplete="off" autofocus class="form-control" name="mother_number" id="mother_number" value="{{row['mnum']}}" type="number">
+            </div>
+
+             <div class="form-group">
+                <label for="student">Student:</label>
+                <input autocomplete="off" autofocus class="form-control" name="student" id="student" value="{{row['student']}}" type="text">
+            </div>
+
+             <div class="form-group">
+                <label for="birth">Birth date:</label>
+                <input autocomplete="off" autofocus class="form-control" name="birth" id="birth" value="{{row['birth']}}" type="text">
+            </div>
+
+             <div class="form-group">
+                <label for="adress">Adress:</label>
+                <input autocomplete="off" autofocus class="form-control" name="adress" id="adress" value="{{row['adress']}}" type="text">
+            </div>
+
+
+
+            <button class="btn btn-success" type="submit">Done</button>
+
+
+        </form>
+    </div>
+
+{%endfor%}
+
+{% endblock %}
