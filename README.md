@@ -16,3 +16,4 @@ There are also some settings:
 2- Edit your information, and once you edit any information, it will be automatically changed.
 
 Thank you!
+Watch the video on youtube: https://youtu.be/0wBgnOFt4_o
